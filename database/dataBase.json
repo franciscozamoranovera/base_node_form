@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "name": "Manzana"
+       
+    },
+    {
+        "id":2,
+        "name": "Platano"
+        
+    },
+    {
+        "id":3,
+        "name": "Pera"
+        
+    }
+]
