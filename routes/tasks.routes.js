@@ -9,7 +9,7 @@ const {
     deleteTask
 } = require('../controllers/tasks.controllers'); 
 
-router.get('/tasks'), getTasks;
+router.get('/tasks', getTasks);
 router.get('/task/:id', getTaskById);
 router.post('/task', postTask); //controller name (postProduct)
 router.patch('/task/:id', patchTask);

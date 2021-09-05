@@ -12,7 +12,7 @@ const { PORT } = process.env; //process.env referencia al archivo .env
 //Routes
 const taskRoutes = require('./routes/tasks.routes');
 
-const prefix = '/api/v1/';
+const prefix = '/api/v1';
 
 //Middlewares
 app.use(express.json());
@@ -32,7 +32,7 @@ app.get('/', (req, res) => {
 
 const server = http.createServer(app);
 server.listen(PORT, () => {
-    console.log(`serve on port ${PORT}`);
+    console.log(`server on port ${PORT}`);
     sequelize
         .sync({ force: false }) //(migrations in sequelize) change to true in production 
         .then(() => console.log("conectados a la base de datos"))
