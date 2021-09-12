@@ -77,14 +77,15 @@ const patchTask = async (req, res) => {
   if (currentTasks) {
     try {
       let { responsible, description } = req.body;
-      let updatedTask = await currentTaks.update({
+      let updatedTask = await currentTasks.update({
         responsible,
         description,
       });
-      res.status(201).json({
+      res.status(200).json({
         success: "Tarea actualizada con éxito",
       });
     } catch (error) {
+      console.log(error)
       res.status(500).json({
         error: error,
       });
